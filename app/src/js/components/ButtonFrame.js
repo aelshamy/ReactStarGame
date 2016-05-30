@@ -8,7 +8,7 @@ var ButtonFrame = React.createClass({
         switch (correct) {
             case true:
                 button = (
-                    <button className="btn btn-success btn-lg">
+                    <button onClick={this.props.acceptAnswer} className="btn btn-success btn-lg">
                         <span className="glyphicon glyphicon-ok"></span>
                     </button>
                 );
@@ -31,6 +31,10 @@ var ButtonFrame = React.createClass({
         return (
             <div id="button-frame">
                 {button}
+                <br/><br/>
+                <button onClick={this.props.redraw} className="btn btn-warning btn-xs" disabled={this.props.redraws===0}>
+                    <span className="glyphicon glyphicon-refresh"></span>&nbsp; {this.props.redraws}
+                </button>
             </div>
         );
     }

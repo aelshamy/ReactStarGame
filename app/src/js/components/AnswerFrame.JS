@@ -6,7 +6,7 @@ var AnswerFrame = React.createClass({
         var props = this.props,
             selectedNumbers = props.selectedNumbers.map(function(i) {
                 return (
-                    <span onClick={props.unSelectNumber.bind(null, i)}>{i}</span>
+                    <span key={i} onClick={props.unSelectNumber.bind(null, i)}>{i}</span>
                 )
             });
         return (

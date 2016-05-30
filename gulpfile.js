@@ -39,10 +39,15 @@ gulp.task('html', function() {
     gulp.src('./app/*.html')
         .pipe(connect.reload());
 });
+gulp.task('css', function() {
+    gulp.src('./app/src/css/*.css')
+        .pipe(connect.reload());
+});
 
 gulp.task('watch', function() {
     gulp.watch('app/dist/js/*.js', ['js']);
     gulp.watch('app/*.html', ['html']);
+    gulp.watch('app/src/css/*.css', ['css']);
     gulp.watch('app/src/js/**/*.js', ['browserify']);
 
 });

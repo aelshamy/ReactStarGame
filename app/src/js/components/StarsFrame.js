@@ -6,7 +6,7 @@ var StarsFrame = React.createClass({
         var stars = [];
         for (var i = 0; i < this.props.numberOfStars; i++) {
             stars.push(
-                <span className="glyphicon glyphicon-star"></span>
+                <span  key={i} className="glyphicon glyphicon-star"></span>
             );
         }
         return (

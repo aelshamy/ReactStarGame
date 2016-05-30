@@ -1,16 +1,19 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+var React = require('react'),
+    config  = require('../config');
 
 var NumbersFrame = React.createClass({
 
     render: function() {
         var numbers = [],
+            selectedNumbers = this.props.selectedNumbers,
+            usedNumbers = this.props.usedNumbers,
             className;
 
-        for (var i = 1; i <= 9; i++) {
-            className = "number selected-" + (this.props.selectedNumbers.indexOf(i) > -1)
+        for (var i = 1; i <= config.numberOfStars; i++) {
+            className = "number selected-" + (selectedNumbers.indexOf(i) > -1);
+            className += " used-" + (usedNumbers.indexOf(i) > -1);
             numbers.push(
-                <div className={className} onClick={this.props.selectNumber.bind(null, i)}>{i}</div>
+                <div key={i} className={className} onClick={this.props.selectNumber.bind(null, i)}>{i}</div>
             );
         }
 
