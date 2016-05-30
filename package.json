@@ -1,0 +1,24 @@
+{
+  "name": "ReactStarGame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ajmoro <amr-hussien@hotmail.com> (https://github.com/aelshamy)",
+  "license": "MIT",
+  "devDependencies": {
+    "firebase": "3.0.3",
+    "gulp": "3.9.1",
+    "gulp-browserify": "0.5.1",
+    "gulp-concat": "2.6.0",
+    "gulp-connect": "4.0.0",
+    "gulp-open": "2.0.0",
+    "gulp-react": "3.1.0",
+    "lodash": "4.13.1",
+    "react": "15.1.0",
+    "react-dom": "15.1.0",
+    "reactify": "1.1.1"
+  }
+}
